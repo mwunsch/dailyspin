@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="Spinning Newspaper as a Service" name="description">
+    <title>The Daily Spin</title>
+    <style type="text/css">
+      body {
+        font-family: 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', arial, sans-serif;
+        background-color: #000;
+      }
+      pre {
+        background-color: #ededed;
+        padding: 0.5em;
+      }
+      .paper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+      .front-page {
+        width: 70%;
+        height: 75%%;
+        padding: 10px;
+        background-color: #fff;
+        -webkit-animation: spin 2s;
+      }
+      .nameplate {
+        text-align: center;
+      }
+
+      @-webkit-keyframes spin {
+        from {
+          opacity: 0;
+          -webkit-transform: rotate(-720deg);
+        }
+
+        to {
+          opacity: 1;
+          -webkit-transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="paper">
+      <%= yield %>
+    </div>
+
+    <%# <script> %>
+    <%#   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ %>
+    <%#   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), %>
+    <%#   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) %>
+    <%#   })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); %>
+
+    <%#   ga('create', 'UA-42402221-1', 'avatarpro.biz'); %>
+    <%#   ga('send', 'pageview'); %>
+    <%# </script> %>
+  </body>
+</html>
+
