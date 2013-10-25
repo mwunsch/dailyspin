@@ -1,36 +1,20 @@
 <section class="front-page">
   <header class="nameplate">
     <h1 class="title">The Daily Spin</h1>
-    <h4 class="motto">Wow. Such headlines. So spinning.</h4>
+    <h4 class="motto">&ldquo;Wow. Such headlines. So spinning.&rdquo;</h4>
     <div class="edition">
       <div class="cell revision">Rev. <%= revision %></div>
       <div class="cell pubdate"><%= Date.today.strftime("%A, %B %e, %Y") %></div>
-      <div class="cell price">1 &#x0042;&#x20e6;</div>
+      <div class="cell price">1&#x0042;&#x20e6;</div>
     </div>
   </header>
   <article class="lede article">
     <h1 class="headline"><%= headline %></h1>
     <div class="text">
-      <img src="http://www.avatarpro.biz/avatar/<%= headline.hash.to_s(16) %>?s=120" class="author-photo" width="120" height="120" />
-      <p>Are you aware of this?  Coming soon. Indeed. Dad asked me to do this on the day he pleads not guilty, as a spectacular protest. A…. ? You can control your bladder when you're dead! Say goodbye to THESE! She's a contestant. It's sorta like an inner beauty pageant. Ah, there it is. Yes. Lindsay and I are planning a night of heterosexual intercourse. Are you at all concerned about an uprising?</p>
-
-      <p>It's OUR nausea. Am I in two thirds of a hospital room?</p> 
-
-      <p>Well excuse me, Judge Reinhold! I think the only time you cooked for us was the morning Rosa's mom died. You gave us cereal in an ashtray. Aren't you the sweetest thing, spending time with what's left of your uncle. What have we always said is the most important thing? We need a name. Maybe 'Operation Hot Mother'. You're Killing Me, Buster. I thought the two of us could talk man-on-man.</p> 
-
-      <p>That was Tom Cruise, the actor. Lucille: They said he was some kind of scientist. Don't worry, these young beauties have been nowhere near the bananas. Coo coo ca chaw. Coo coo ca chaw. Coo coo ca chaw. I'M A MONSTER!!</p> 
-
-      <p>And here you are coming out of your mother's third base! Even though sooooo many people in this office are begging for it. Look at us, crying like a bunch of girls on the last day of camp.</p> 
-
-      <p>And THAT'S why you always leave a note. I'm an ideas man, Michael. I think I proved that with "Fuck Mountain." I'm foolish and I'm funny and I'm needy. Am I needy? Are you sure I'm not needy? 'Cause I feel needy sometimes.</p> 
-
-      <p>No one was making fun of Andy Griffith. I can't emphasize that enough. Look at us, crying like a couple of girls on the last day of camp. Te quiero. English, please. I love you! Great, now I'm late. A night of heterosexual intercourse. Please refrain from Mayoneggs during this salmonella scare. Ann certainly has a great deal of Mass.</p> 
-
-      <p>Don't worry, these young beauties have been nowhere near the bananas. Yeah, like I'm going to take a whiz through this $5,000 suit. COME ON. Oh, like when they say "poofter" to mean "tourist", yes. Okay, Lindsay, are you forgetting that I was a professional twice over - an analyst and a therapist. The world's first analrapist. I'll be in the hospital bar. You know there isn't a hospital bar, Mother. Well, this is why people hate hospitals.</p> 
-
-      <p>Even it means me taking a chubby… I will suck it up. It's sort of like going from prime rib to… I don't know… weird brother of prime rib. Waiting for the Emmys. BTW did you know won 6 Emmys and was still canceled early by Fox? COME ON. Yeah, I invited her. You said you wanted to spend time some with her. You said I was being an Ann hog. Friend of mine from college. He also has a boat tho not called the Seaward.</p> 
-
-      <p>♪♪ It ain't easy being white… ♪♪ I'm gonna go get sexy. The worst that could happen is that I could spill coffee all over this $3,000 suit. COME ON. That's how Tony Wonder lost a nut. Uncle Gob… was Aunt Lindsay ever pregnant? Yeah, sure, dozens of times.</p> 
+      <img src="http://www.avatarpro.biz/avatar/<%= checksum %>?s=120" class="author-photo" width="120" height="120" />
+      <% paragraphs.each do |p| %>
+        <p><%= p %></p>
+      <% end %>
     </div>
   </article>
 </section>
