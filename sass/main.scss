@@ -21,10 +21,17 @@ body {
   flex-direction: column;
 }
 
+.permalink {
+  margin: 0.5em 0 0;
+  font-family: $headline;
+  color: #ededed;
+  text-decoration: none;
+  font-size: 2em;
+}
 .form {
   width: 100%;
   text-align: center;
-  margin: 2em 0;
+  margin: 1em 0;
   font-family: $headline;
   font-weight: 700;
   font-size: 1.5em;

@@ -1,20 +1,22 @@
-<section class="front-page">
+<section class="front-page" id="<%= checksum %>">
   <header class="nameplate">
     <h1 class="title">The Daily Spin</h1>
     <h4 class="motto">&ldquo;Wow. Such headlines. So spinning.&rdquo;</h4>
     <div class="edition">
-      <div class="cell revision">Rev. <%= revision %></div>
-      <div class="cell pubdate"><%= Date.today.strftime("%A, %B %e, %Y") %></div>
+      <div class="cell revision">Rev. <%= revision || "&beta;" %></div>
+      <div class="cell pubdate"><%= date.strftime("%A, %B %e, %Y") %></div>
       <div class="cell price">1&#x0042;&#x20e6;</div>
     </div>
   </header>
   <article class="lede article">
     <h1 class="headline"><%= headline %></h1>
     <div class="text">
-      <img src="http://www.avatarpro.biz/avatar/<%= checksum %>?s=120" class="author-photo" width="120" height="120" />
+      <img src="<%= image %>" class="author-photo" width="120" height="120" />
       <% paragraphs.each do |p| %>
         <p><%= p %></p>
       <% end %>
     </div>
   </article>
 </section>
+
+<a class="permalink" href="<%= permalink %>">&infin;</a>

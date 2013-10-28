@@ -14,10 +14,17 @@ body {
   justify-content: center;
   flex-direction: column; }
 
+.permalink {
+  margin: 0.5em 0 0;
+  font-family: "franklin-gothic-urw", "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+  color: #ededed;
+  text-decoration: none;
+  font-size: 2em; }
+
 .form {
   width: 100%;
   text-align: center;
-  margin: 2em 0;
+  margin: 1em 0;
   font-family: "franklin-gothic-urw", "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
   font-weight: 700;
   font-size: 1.5em;

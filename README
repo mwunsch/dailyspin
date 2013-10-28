@@ -1,1 +1,3 @@
 sass --scss --watch sass:public/css
+
+t timeline --number=42 --csv twoheadlines > headlines.csv
