@@ -67,6 +67,7 @@ body {
   .nameplate .title {
     font-size: 4em;
     margin: 0;
+    font-weight: normal;
     font-family: "cabazon", "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif; }
   .nameplate .motto {
     margin: 0;
