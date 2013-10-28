@@ -15,11 +15,17 @@ body {
   flex-direction: column; }
 
 .permalink {
-  margin: 0.5em 0 0;
+  display: block;
+  width: 8em;
+  margin: 0.5em auto 0;
+  text-align: center;
   font-family: "franklin-gothic-urw", "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
   color: #ededed;
   text-decoration: none;
-  font-size: 2em; }
+  font-size: 2em;
+  -webkit-animation: fade 4s;
+  -moz-animation: fade 4s;
+  animation: fade 4s; }
 
 .form {
   width: 100%;
