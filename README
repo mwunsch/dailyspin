@@ -1,3 +1,24 @@
-sass --scss --watch sass:public/css
+This is a spinning newspaper as a service.
+http://www.dailyspin.biz/
 
-t timeline --number=42 --csv twoheadlines > headlines.csv
+It uses a number of advanced CSS techniques. As of this writing, the full experience only works well in Chrome.
+Those techniques are:
+
++ Flex box
++ Animation
++ Transforms
++ Filters
++ Columns
+
+It uses sass[1] and here's the command I run when I'm developing:
+    sass --scss --watch sass:public/css
+
+The stock headlines are pulled into a csv from the `t` command line tool[2].
+    t timeline --number=42 --csv twoheadlines > headlines.csv
+
+http://markwunsch.com
+
+[1]: http://sass-lang.com/
+[2]: http://sferik.github.io/t/
+
+Copyright (c) 2013 Mark Wunsch.
