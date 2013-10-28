@@ -67,7 +67,7 @@ body {
   color: #222;
   border: 1px solid #ededed;
   @include border-bottom-radius(0.5em);
-  @include animation(spin 4s);
+  @include animation(spin 1.2s);
 }
 .nameplate {
   text-align: center;
@@ -143,12 +143,10 @@ body {
     @include transform( rotate(-1440deg) scale(0.45) );
   }
 
-  30% {
+  100% {
     opacity: 1;
-    @include transform( scale(1) );
+    @include transform( rotate(0deg) scale(1) );
   }
-
-  100% { @include transform( rotate(0deg) ); }
 }
 
 @include keyframes(fade) {

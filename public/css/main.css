@@ -55,9 +55,9 @@ body {
   border: 1px solid #ededed;
   border-bottom-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
-  -webkit-animation: spin 4s;
-  -moz-animation: spin 4s;
-  animation: spin 4s; }
+  -webkit-animation: spin 1.2s;
+  -moz-animation: spin 1.2s;
+  animation: spin 1.2s; }
 
 .nameplate {
   text-align: center;
@@ -122,48 +122,36 @@ body {
     opacity: 0;
     -webkit-transform: rotate(-1440deg) scale(0.45); }
 
-  30% {
-    opacity: 1;
-    -webkit-transform: scale(1); }
-
   100% {
-    -webkit-transform: rotate(0deg); } }
+    opacity: 1;
+    -webkit-transform: rotate(0deg) scale(1); } }
 
 @-moz-keyframes spin {
   0% {
     opacity: 0;
     -moz-transform: rotate(-1440deg) scale(0.45); }
 
-  30% {
-    opacity: 1;
-    -moz-transform: scale(1); }
-
   100% {
-    -moz-transform: rotate(0deg); } }
+    opacity: 1;
+    -moz-transform: rotate(0deg) scale(1); } }
 
 @-o-keyframes spin {
   0% {
     opacity: 0;
     -o-transform: rotate(-1440deg) scale(0.45); }
 
-  30% {
-    opacity: 1;
-    -o-transform: scale(1); }
-
   100% {
-    -o-transform: rotate(0deg); } }
+    opacity: 1;
+    -o-transform: rotate(0deg) scale(1); } }
 
 @keyframes spin {
   0% {
     opacity: 0;
     transform: rotate(-1440deg) scale(0.45); }
 
-  30% {
-    opacity: 1;
-    transform: scale(1); }
-
   100% {
-    transform: rotate(0deg); } }
+    opacity: 1;
+    transform: rotate(0deg) scale(1); } }
 
 @-webkit-keyframes fade {
   0% {
