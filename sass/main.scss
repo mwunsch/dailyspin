@@ -129,6 +129,9 @@ body {
 .author-photo {
   float: left;
   margin-right: 1em;
+  // include a filter without brightness for webkit
+  // because safari's brightness is weird
+  @include prefixer(filter, grayscale(100%) contrast(80%), webkit);
   @include prefixer(filter, grayscale(100%) contrast(80%) brightness(110%), webkit moz spec);
 
   & + p { margin-top: 0; }

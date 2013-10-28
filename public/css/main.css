@@ -110,6 +110,7 @@ body {
 .author-photo {
   float: left;
   margin-right: 1em;
+  -webkit-filter: grayscale(100%) contrast(80%);
   -webkit-filter: grayscale(100%) contrast(80%) brightness(110%);
   -moz-filter: grayscale(100%) contrast(80%) brightness(110%);
   filter: grayscale(100%) contrast(80%) brightness(110%); }
