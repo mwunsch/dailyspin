@@ -4,6 +4,7 @@ require 'digest/md5'
 require 'base64'
 require 'literate_randomizer'
 require 'twitter'
+require 'uri'
 
 configure do
   set :revision, `git rev-parse --short HEAD`
@@ -35,10 +36,15 @@ end
 
 get '/' do
   headline = (params[:q] || settings.headlines.sample).strip
+
   if params[:q]
-    redirect to("/#{Base64.urlsafe_encode64(headline)}")
+    if t = twitter_uri_or_headline(headline)
+      redirect to("/t/#{t}")
+    else
+      redirect to("/#{Base64.urlsafe_encode64(headline)}")
+    end
   else
-    render_frontpage(headline)
+    render_frontpage headline
   end
 end
 
@@ -90,5 +96,16 @@ def frontpage_from_tweet(tweet)
       permalink: "http://twitter.com/#{tweet.user.screen_name}/status/#{tweet.id}"
     })
   end
+end
+
+def twitter_uri_or_headline(query)
+  u = URI.parse(query)
+  return false unless u.is_a?(URI::HTTP) and u.hostname.match(/\A(www\.)?twitter\.com/)
+
+  /^\/\w+\/status\/(\d+)$/.match(u.path) do |match|
+    match[1]
+  end
+rescue URI::InvalidURIError => e
+  false
 end
 
