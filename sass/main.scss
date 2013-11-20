@@ -105,6 +105,10 @@ body {
     &:last-of-type { text-align: right; }
   }
 
+  .revision {
+    font-size: 0.8em;
+  }
+
   .pubdate {
     font-variant: small-caps;
     font-weight: bold;
