@@ -7,7 +7,7 @@ require 'twitter'
 require 'uri'
 
 configure do
-  set :revision, `git rev-parse --short HEAD`
+  set :wallet, '1C7TVHUTLkj4MYqjyqXyKEiWo1mvaBwPtW'
   set :cache, {}
   set :tweets, {}
   set :headlines, CSV.read(File.join(settings.root, "headlines.csv"), headers: true)["Text"].concat([
@@ -73,7 +73,7 @@ def render_frontpage(headline, checksum = nil, options = {})
     checksum: checksum,
     date: options[:date] || Date.today,
     image: options[:image]|| "http://www.avatarpro.biz/avatar/#{checksum}?s=120",
-    revision: settings.revision,
+    wallet: settings.wallet,
     permalink: options[:permalink] || "/#{Base64.urlsafe_encode64(headline)}",
     paragraphs: LiterateRandomizer.paragraphs(join: false, paragraphs: 12..18)
   }
