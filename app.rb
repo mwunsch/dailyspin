@@ -25,7 +25,7 @@ configure do
   end
 
   if settings.twitter_client?
-    set :twitter, Twitter::Client.new(
+    set :twitter, Twitter::REST::Client.new(
       consumer_key:        ENV["TWITTER_CONSUMER_KEY"],
       consumer_secret:     ENV["TWITTER_CONSUMER_SECRET"],
       access_token:        ENV["TWITTER_ACCESS_TOKEN"],
@@ -108,4 +108,3 @@ def twitter_uri_or_headline(query)
 rescue URI::InvalidURIError => e
   false
 end
-
