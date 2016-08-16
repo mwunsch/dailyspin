@@ -142,15 +142,14 @@ body {
 @include keyframes(spin) {
   0% {
     opacity: 0;
-    @include transform( rotate(-1440deg) scale(0.45) );
+    @include transform( rotate(1440deg) scale(0.25) );
   }
 
   30% {
     opacity: 1;
-    @include transform( scale(1) );
   }
 
-  100% { @include transform( rotate(0deg) ); }
+  100% { @include transform( rotate(0deg) scale(1) ); }
 }
 
 @include keyframes(fade) {
